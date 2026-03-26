@@ -1,0 +1,26 @@
+/* pages/mine/mine.wxss */
+.avatar-box {
+  text-align: center;
+  margin: 40rpx 0;
+}
+
+.nickname {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-top: 20rpx;
+}
+
+.balance {
+  font-size: 28rpx;
+  color: #666;
+  margin-top: 10rpx;
+}
+
+.menu-group {
+  margin: 20rpx;
+}
+
+.exit-box {
+  text-align: center;
+  margin-top: 80rpx;
+}

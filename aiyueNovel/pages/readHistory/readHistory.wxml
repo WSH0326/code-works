@@ -1,0 +1,41 @@
+<!--pages/readHistory/readHistory.wxml-->
+<view class="history-container">
+  <!-- 加载中状态 -->
+  <view class="loading-box" wx:if="{{loading}}">
+    <van-loading color="#4cd964" size="24px">加载中...</van-loading>
+  </view>
+
+  <!-- 空数据状态 -->
+  <view class="empty-box" wx:elif="{{empty}}">
+    <image src="/static/default.jpg" class="empty-img" mode="widthFix"></image>
+    <text class="empty-text">暂无阅读历史</text>
+  </view>
+
+  <!-- 阅读历史列表 -->
+  <view class="history-list" wx:else>
+    <view 
+      class="history-item" 
+      wx:for="{{readList}}" 
+      wx:key="bookId" 
+      bindtap="toReadBook"
+      data-id="{{item.bookId}}"
+    >
+      <!-- 书籍封面 -->
+      <view class="book-cover">
+        <image src="" mode="aspectFill" class="cover-placeholder"></image>
+      </view>
+
+      <!-- 书籍信息 -->
+      <view class="book-info">
+        <text class="book-name">{{item.bookName}}</text>
+        <text class="book-author">{{item.authorName}}</text>
+        <text class="read-progress">最近阅读</text>
+        <text class="read-time">{{item.time}}</text>
+      </view>
+
+      <view class="del-btn" catchtap="removeHistory" data-bookid="{{item.bookId}}">
+        删除
+      </view>
+    </view>
+  </view>
+</view>

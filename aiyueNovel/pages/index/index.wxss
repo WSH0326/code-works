@@ -1,0 +1,135 @@
+/**index.wxss**/
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.top-bar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx;
+}
+
+/* 文字 LOGO 样式 */
+#logo{
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.icon-group{
+  display: flex;
+  gap: 20rpx;
+}
+.van-tab{
+  background-color: green;
+  color: white;
+}
+
+.novelcontainer{
+  width: 390rpx;
+  height: auto;
+  margin-bottom: 20rpx;
+}
+.novelimg{
+  padding: 0 15rpx;
+}
+/* 图片样式已替换为占位 */
+.novelimg>image{
+  width: 100px;
+  height: 125px;
+}
+.containbox{
+  display: flex;
+  align-items: center;
+}
+.noveldesc{
+  overflow: hidden;
+  width: 240px;
+  height: 70rpx;
+  color: #a6a6a6;
+  font: 14px Helvetica Neue, Helvetica, PingFang SC, Tahoma, Arial, sans-serif;
+}
+.bookinfo{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20rpx;
+}
+.authorinfo{
+  height: 44rpx;
+  width: 448rpx; 
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+#bookname{
+  color: #333;
+  font: 14px Helvetica Neue, Helvetica, PingFang SC, Tahoma, Arial, sans-serif;
+}
+#bookauthor{
+  color: #a6a6a6;
+  font: 14px Helvetica Neue, Helvetica, PingFang SC, Tahoma, Arial, sans-serif;
+  margin-left: 10rpx;
+}
+#bookdate{
+  color: #ff5722;
+  font: 14px Helvetica Neue, Helvetica, PingFang SC, Tahoma, Arial, sans-serif;
+  font-style:italic
+}
+.bookdesc{
+  overflow: hidden;
+  height: 40rpx;
+  color: #a6a6a6;
+  font: 14px Helvetica Neue, Helvetica, PingFang SC, Tahoma, Arial, sans-serif;
+  padding: 0 20rpx;
+}
+.jingpin{
+  width: 750rpx;
+  height: 340rpx;
+}
+.jingpin-item>image{
+  width: 100px;
+  height: 125px;
+}
+.jingpin-item{
+  width: 200rpx;
+  height: 172rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#titlename{
+  color: #333;
+  font: 14px Helvetica Neue, Helvetica, PingFang SC, Tahoma, Arial, sans-serif;
+  margin-top: 10rpx;
+  text-align: center;
+}
+
+/* 底部导航栏整体样式 */
+van-tabbar {
+  background: #ffffff !important;
+  border-top: none !important;
+  box-shadow: 0 -2rpx 12rpx rgba(0, 0, 0, 0.05);
+}
+
+/* 选中项颜色 */
+.van-tabbar-item--active {
+  color: #1677ff !important;
+}
+
+/* 未选中项颜色 */
+.van-tabbar-item {
+  color: #666666 !important;
+}
+
+/* 图标大小 */
+.van-tabbar-item__icon {
+  font-size: 38rpx !important;
+}
+
+/* 文字大小 */
+.van-tabbar-item__text {
+  font-size: 24rpx !important;
+  margin-top: 6rpx !important;
+}

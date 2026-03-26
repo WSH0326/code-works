@@ -1,0 +1,48 @@
+<!-- pages/bookShelf/bookShelf.wxml -->
+
+<!-- 加载状态 -->
+<view wx:if="{{loading}}" class="loading">
+  加载书架中...
+</view>
+
+<!-- 空书架 -->
+<view wx:elif="{{empty}}" class="empty-shelf">
+  <text>你的书架还是空的~</text>
+  <button bindtap="goToHome" catchtap>去添加书籍</button>
+</view>
+
+<!-- 书架列表 -->
+<view wx:else class="shelf-container">
+  <view 
+    wx:for="{{shelfList}}" 
+    wx:key="Id" 
+    class="book-card"
+  >
+    <!-- 点击跳阅读 -->
+    <view 
+      class="book-main" 
+      bindtap="toReadBook" 
+      data-id="{{item.Id}}" 
+      data-firstindexid="{{item.firstIndexId}}"
+    >
+      <!-- 封面 -->
+      <image class="cover" src="{{item.picUrl || '/static/default-cover.png'}}"></image>
+      
+      <!-- 书名 + 作者 -->
+      <view class="book-info">
+        <text class="book-name">{{item.bookName}}</text>
+        <text class="author" wx:if="{{item.authorName}}">作者：{{item.authorName}}</text>
+      </view>
+    </view>
+
+    <!-- 移除书架按钮 -->
+    <button 
+      class="del-btn" 
+      bindtap="removeFromShelf" 
+      data-id="{{item.Id}}"
+      catchtap
+    >
+      移除
+    </button>
+  </view>
+</view>

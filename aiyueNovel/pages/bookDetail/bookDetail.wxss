@@ -1,0 +1,102 @@
+/* pages/bookDetail/bookDetail.wxss */
+.detail-container {
+  padding: 20rpx;
+}
+.loading {
+  text-align: center;
+  padding: 50rpx 0;
+  font-size: 28rpx;
+  color: #999;
+}
+.book-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+.book-pic {
+  width: 200rpx;
+  height: 280rpx;
+  margin: 0 auto;
+}
+.book-pic image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10rpx;
+}
+.book-base-info {
+  text-align: center;
+}
+.book-name {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.book-author {
+  font-size: 28rpx;
+  color: #666;
+  margin: 10rpx 0;
+}
+.book-category, .book-word-count {
+  font-size: 26rpx;
+  color: #999;
+}
+
+.btn-group{
+  margin: 0 auto;
+  display: flex;
+}
+.custom-btn {
+  padding: 12rpx 30rpx;
+  border-radius: 6rpx;
+  font-size: 26rpx;
+  margin: 0 10rpx;
+}
+.btn-read {
+  background: #3eaf7c;
+  color: #fff;
+}
+.btn-shelf {
+  background: #fff;
+  color: #000;
+  border: 1rpx solid #000;
+}
+
+.book-desc {
+  padding: 20rpx;
+  background: #f5f5f5;
+  border-radius: 10rpx;
+}
+.desc-title {
+  font-size: 28rpx;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10rpx;
+}
+
+/* 最新章节 */
+.collapse-title {
+  padding: 20rpx;
+  background: #f5f5f5;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.collapse-content {
+  padding: 20rpx;
+  font-size: 26rpx;
+  line-height: 1.8;
+}
+.chapter-item {
+  padding: 8rpx 0;
+}
+
+/* 完整目录 */
+.cell-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+  background: #f5f5f5;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  margin-top: 10rpx;
+}
