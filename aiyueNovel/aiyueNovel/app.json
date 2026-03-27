@@ -8,8 +8,7 @@
     "pages/allIndex/allIndex",
     "pages/bookList/bookList",
     "pages/bookDetail/bookDetail",
-    "pages/login/login",
-    "pages/logs/logs"
+    "pages/login/login"
   ],
   "window": {
     "navigationBarTextStyle": "white",
