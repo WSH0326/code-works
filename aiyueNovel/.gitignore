@@ -4,7 +4,7 @@ logs/
 miniprogram-log/
 
 # 小程序构建文件
-miniprogram-npm/
+miniprogram_npm/
 node_modules/
 
 # 系统垃圾文件
