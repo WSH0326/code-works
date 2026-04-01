@@ -1,0 +1,49 @@
+
+.container.data-v-da2e5278 {
+	padding: 20rpx;
+	background: #f5f5f5;
+	min-height: 100vh;
+}
+.loading.data-v-da2e5278 {
+	text-align: center;
+	padding: 40rpx 0;
+	color: #666;
+}
+.empty.data-v-da2e5278 {
+	text-align: center;
+	padding: 60rpx 0;
+	color: #999;
+}
+.history-list.data-v-da2e5278 {
+	background: #fff;
+	border-radius: 12rpx;
+}
+.item.data-v-da2e5278 {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 25rpx;
+	border-bottom: 1rpx solid #eee;
+}
+.item.data-v-da2e5278:last-child {
+	border-bottom: none;
+}
+.info.data-v-da2e5278 {
+	flex: 1;
+}
+.title.data-v-da2e5278 {
+	display: block;
+	font-size: 30rpx;
+	color: #333;
+	margin-bottom: 8rpx;
+}
+.time.data-v-da2e5278 {
+	font-size: 24rpx;
+	color: #999;
+}
+.del.data-v-da2e5278 {
+	color: #ff4444;
+	font-size: 26rpx;
+	padding: 10rpx;
+}
+

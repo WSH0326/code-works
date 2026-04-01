@@ -1,0 +1,1 @@
+<view class="container"><view><block wx:for="{{allIndex}}" wx:for-item="item" wx:for-index="index" wx:key="*this"><view><van-cell vue-id="{{'e82d4fc0-1-'+index}}" title="{{item.indexName}}" data-index="{{index}}" data-event-opts="{{[['^click',[['getText']]]]}}" bind:click="__e" bind:__l="__l"></van-cell></view></block></view></view>
