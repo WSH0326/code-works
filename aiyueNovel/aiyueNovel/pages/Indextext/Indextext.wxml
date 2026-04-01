@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="toolbar">
+    <text bindtap="getLastIndex">上一章</text>
+    <text bindtap="getAllIndex">目录</text>
+    <text bindtap="getNextIndex">下一章</text>
+  </view>
+
+  <!-- 章节内容 -->
+  <view class="content-wrap" wx:if="{{!isEmptyObject(Indextext)}}">
+    <view class="chapter-title">{{Indextext.title}}</view>
+    <view class="chapter-content">{{Indextext.content}}</view>
+  </view>
+
+  <view class="empty-tip" wx:else>暂无章节内容</view>
+</view>

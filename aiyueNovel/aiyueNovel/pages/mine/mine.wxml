@@ -1,0 +1,49 @@
+
+<!-- 头像区域 -->
+<view class="avatar-box">
+  <van-image
+    round
+    width="140rpx"
+    height="140rpx"
+    src="https://img95.699pic.com/element/40204/2746.png_860.png"
+  />
+  <view class="nickname">{{nickName}}</view>
+  <view class="balance">账户余额：¥{{accountBalance}}</view>
+</view>
+
+<!-- 菜单列表 -->
+<van-cell-group inset class="menu-group">
+  <van-cell
+    icon="gold-coin-o"
+    is-link
+    title="充值中心"
+    url="/pages/dashboard/index"
+  />
+
+  <van-cell
+    icon="label-o"
+    is-link
+    title="我的书架"
+    bind:tap="goToBookShelf"
+  />
+
+  <van-cell
+    icon="clock-o"
+    is-link
+    title="阅读历史"
+    bind:tap="getReadHistory"
+  />
+</van-cell-group>
+
+<!-- 退出登录 -->
+<view class="exit-box">
+  <van-button
+    round
+    type="danger"
+    plain
+    bind:tap="exitLogin"
+    custom-style="width:90%;"
+  >
+    退出登录
+  </van-button>
+</view>

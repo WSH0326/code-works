@@ -1,0 +1,123 @@
+/* pages/readHistory/readHistory.wxss */
+page {
+  background-color: #f5f5f5;
+}
+
+.history-container {
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 20rpx;
+}
+
+/* 加载中样式 */
+.loading-box {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* 空数据样式 */
+.empty-box {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.empty-img {
+  width: 200rpx;
+  margin-bottom: 20rpx;
+  opacity: 0.4;
+}
+
+.empty-text {
+  font-size: 28rpx;
+  color: #999;
+}
+
+/* 列表样式 */
+.history-list {
+  width: 100%;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  margin-bottom: 16rpx;
+  box-shadow: 0 2rpx 12rpx rgba(0,0,0,0.05);
+  transition: all 0.2s;
+}
+
+.history-item:active {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
+
+/* 封面样式 */
+.book-cover {
+  width: 130rpx;
+  height: 170rpx;
+  margin-right: 24rpx;
+}
+
+.book-cover image {
+  width: 100%;
+  height: 100%;
+  border-radius: 12rpx;
+  box-shadow: 0 4rpx 10rpx rgba(0,0,0,0.1);
+}
+
+/* 书籍信息 */
+.book-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 170rpx;
+}
+
+.book-name {
+  font-size: 32rpx;
+  color: #222;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.book-author {
+  font-size: 26rpx;
+  color: #666;
+  margin-top: 8rpx;
+}
+
+.read-progress {
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 12rpx;
+}
+
+.read-time {
+  font-size: 22rpx;
+  color: #bbb;
+  margin-top: auto;
+  text-align: right;
+}
+
+.del-btn {
+  font-size: 24rpx;
+  background: #ff4444;
+  color: white;
+  border-radius: 30rpx;
+  padding: 8rpx 20rpx;
+  border: none;
+  margin-left: 20rpx;
+}

@@ -1,0 +1,27 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mine/mine",
+    "pages/readHistory/readHistory",
+    "pages/bookShelf/bookShelf",
+    "pages/Indextext/Indextext",
+    "pages/allIndex/allIndex",
+    "pages/bookList/bookList",
+    "pages/bookDetail/bookDetail",
+    "pages/login/login"
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "爱阅小说",
+    "navigationBarBackgroundColor": "#3eaf7c"
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "usingComponents": {
+  "van-field": "@vant/weapp/field/index",
+  "van-cell": "@vant/weapp/cell/index",
+  "van-cell-group": "@vant/weapp/cell-group/index",
+  "van-button": "@vant/weapp/button/index"
+  }
+}

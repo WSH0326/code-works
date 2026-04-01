@@ -1,0 +1,72 @@
+<!--index.wxml-->
+<view class="top-bar">
+  <!-- 远程logo替换成本地默认图，避免加载失败 -->
+  <text id="logo">爱阅小说阅读平台</text>
+  <view class="icon-group">
+    <van-icon name="bar-chart-o" size="23px" bind:tap="goToBookShelf" />
+    <van-icon name="contact-o" size="23px" bind:tap="login" />
+  </view>
+</view>
+
+<button bind:tap="login">登录</button>
+
+<van-cell-group>
+  <van-field
+    value="{{ value }}"
+    bind:input="onInputChange"
+    placeholder="请输入书名.作者"
+  >
+    <van-button slot="button" size="small" type="primary" bind:tap="searchBook">
+      搜索
+    </van-button>
+  </van-field>
+</van-cell-group>
+
+<van-cell title="精品推荐" />
+<scroll-view scroll-x="true" class="jingpin">
+  <view style="display: flex;width: 1285px;">
+    <view class="jingpin-item" wx:for="{{jingpinList}}" wx:key="id" bind:tap="getBookInfo" data-id="{{item.id}}">
+      <!-- 统一用本地默认图 -->
+      <image src="" class="cover-placeholder" />
+      <view id="titlename">{{item.title}}</view>
+    </view>
+  </view>
+</scroll-view>
+
+<van-cell title="热门推荐" />
+<view class="novelcontainer" wx:for="{{bookList}}" wx:key="id">
+  <view class="containbox" bind:tap="getBookInfo" data-id="{{item.id}}">
+    <view class="novelimg">
+      <image src="" mode="" class="cover-placeholder" />
+    </view>
+    <view class="novelinfo">
+      <text id="novelname">{{item.title}}</text>
+      <view id="bookauthor">作者:{{item.author}}</view>
+      <view class="noveldesc">
+        <rich-text nodes="{{item.desc || '简介：这是一本精彩小说'}}" />
+      </view>
+    </view>
+  </view>
+</view>
+
+<van-cell title="最新更新" value="更多 >>" />
+<view style="padding-bottom: 30rpx;" wx:for="{{updateRankList}}" wx:key="id">
+  <view class="bookinfo" bind:tap="getBookInfo" data-id="{{item.id}}">
+    <view class="authoeinfo">
+      <text id="bookname">{{index+1}}.{{item.title}}</text>
+      <text> - </text>
+      <text id="bookauthor">{{item.author}}</text>
+    </view>
+    <view id="bookdate">{{item.year || '未知时间'}}</view>
+  </view>
+  <view class="bookdesc">
+    <rich-text nodes="{{item.desc || '暂无简介'}}" />
+  </view>
+</view>
+
+<van-tabbar active="{{ active }}" bind:change="onTabbarChange">
+  <van-tabbar-item icon="home-o">首页</van-tabbar-item>
+  <van-tabbar-item icon="clock-o" bind:tap="goToReadHistory">阅读记录</van-tabbar-item>
+  <van-tabbar-item icon="label-o" bind:tap="goToBookShelf">书架</van-tabbar-item>
+  <van-tabbar-item icon="user-o" bind:tap="goToMine">我的</van-tabbar-item>
+</van-tabbar>

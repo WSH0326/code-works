@@ -1,0 +1,3 @@
+<view wx:for="{{allIndex}}" wx:key="id">
+<van-cell title="{{item.indexName}}" bind:tap="getText" data-index="{{index}}" />
+</view>

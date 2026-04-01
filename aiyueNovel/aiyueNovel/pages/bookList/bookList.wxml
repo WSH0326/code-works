@@ -1,0 +1,22 @@
+<view class="page-container">
+  <view 
+    wx:for="{{bookList}}" 
+    wx:key="id" 
+    class="novelcontainer"
+  >
+    <view class="containbox" bindtap="getBookInfo" data-id="{{item.id}}">
+      <view class="novelimg">
+        <image src="" mode="aspectFill" class="cover-placeholder"></image>
+      </view>
+      <view class="novelinfo">
+        <view id="novelname">{{item.bookName}}</view>
+        <view id="bookauthor">{{item.authorName}}</view>
+        <view class="noveldesc">{{item.desc || '暂无简介'}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="page-tips" wx:if="{{bookList.length === 0}}">
+    暂无搜索结果
+  </view>
+</view>
