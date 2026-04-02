@@ -1,0 +1,69 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "首页"
+      }
+    },
+    {
+      "path": "pages/mine/mine",
+      "style": {
+        "navigationBarTitleText": "我的"
+      }
+    },
+    {
+      "path": "pages/readHistory/readHistory",
+      "style": {
+        "navigationBarTitleText": "阅读历史"
+      }
+    },
+    {
+      "path": "pages/bookShelf/bookShelf",
+      "style": {
+        "navigationBarTitleText": "书架"
+      }
+    },
+    {
+      "path": "pages/indexText/indexText",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "pages/allIndex/allIndex",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "pages/bookList/bookList",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "pages/bookDetail/bookDetail",
+      "style": {
+        "navigationBarTitleText": "小说详情"
+      }
+    },
+    {
+      "path": "pages/login/login",
+      "style": {
+        "navigationBarTitleText": "登录"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "爱阅小说",
+    "navigationBarBackgroundColor": "#3eaf7c"
+  },
+  "usingComponents": {
+    "van-field": "/node_modules/@vant/weapp/dist/field/index",
+    "van-cell": "/node_modules/@vant/weapp/dist/cell/index",
+    "van-cell-group": "/node_modules/@vant/weapp/dist/cell-group/index",
+    "van-button": "/node_modules/@vant/weapp/dist/button/index"
+  }
+}
